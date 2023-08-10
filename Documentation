@@ -1,0 +1,79 @@
+Go to backend folder
+Then do the following: 
+
+
+<!-- .env is used to store sensitive information that we do not want to expose to public -->
+### create a .env file with following thing
+```
+PORT=ENTER PORT NUMBER
+MONGO_USERNAME=ENTER MONGODB ATLAS USERNAME
+MONGO_DBNAME=ENTER MONGODB ATLAS DBNAME
+MONGO_PASSWORD=ENTER MONGODB ATLAS PASSWORD
+```
+
+<!-- Packages required to run dependencies, application will not run without these dependencies -->
+### Install dependencies
+```
+yarn install
+```
+
+
+<!-- This is used to start the server before making any request to the server -->
+### Run the server
+
+```
+node app
+```
+
+or
+
+```
+nodemon app
+```
+
+<!-- api to test functionality -->
+### API to test functionality using postman
+
+<!-- This will fetch all posts -->
+GET : http://localhost:PORT/posts/
+
+<!-- This will fetch a single post -->
+GET : http://localhost:PORT/posts/id
+
+<!-- This will create a post -->
+POST : http://localhost:PORT/posts/
+body: {
+    "title": "title",
+    "description": "description"
+}
+
+<!-- This will update a post -->
+PUT : http://localhost:PORT/posts/id
+body: {
+    "title": "title",
+    "description": "description"
+}
+
+<!-- This will delete a post -->
+DELETE : http://localhost:PORT/posts/id
+
+
+### Architecture
+1.Followed MVC architecture for project structure
+routes: contains all the routes, routes are used to define the routes, bascially the url
+controllers: contains all the controllers, controllers are used to handle the request and response, bascially the logic
+models: contains all the models, like here i have created the post model, if you want to add more options you can add it here and handle it from its controller
+
+2.Followed REST API architecture for API structure
+
+
+### Database
+MongoDB Atlas is used to store the data as it is a cloud database service and can be used from anywhere
+
+### Author info
+Name: Aditya Jha
+Email: adi4ant@gmail.com
+Project: Backend Task for EnverX Internship
+
+
+
