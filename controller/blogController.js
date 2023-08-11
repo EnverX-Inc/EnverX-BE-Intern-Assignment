@@ -18,6 +18,12 @@ exports.getBlogById = async (req, res) => {
   }
 };
 exports.createBlog = async (req, res) => {
+  const { title, content } = req.body;
+  if (!title || !content) {
+    return res
+      .status(400)
+      .json({ message: "Please enter  title and content fields" });
+  }
   const blog = new Blog({
     title: req.body.title,
     content: req.body.content,
