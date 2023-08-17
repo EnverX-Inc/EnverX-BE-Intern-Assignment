@@ -6,12 +6,12 @@ and trade future carbon credits.
 ## _Assginment For Backend Intern Role_
 1. **Clone the Repository**: Start by cloning this repository to your local machine.
  git clone https://github.com/your-username/EnverX-BE-INTERN-ASSIGNMENT.git
- 2.npm install to install all the required packages to run the project.
- 3.make a database on mongodB atlas.
- 3.Create a .env file in the project root directory and set up the necessary environment variables. 
+2.npm install to install all the required packages to run the project.
+3.make a database on mongodB atlas.
+4.Create a .env file in the project root directory and set up the necessary environment variables. 
  DB_USERNAME=your-mongodb-connection-string
  DB_PASSWORD=your-secret-key
- 4.to run the project : npm start
+5.to run the project : npm start
  The server will run on http://localhost:5000
 
 
@@ -28,4 +28,4 @@ GET /api/blog/posts/:id: Get a specific blog by ID.
 DELETE /api/blog/posts/:id: Delete a blog by ID.
 GET /api/blog/user/:id: Get blogs by user ID.
 
-5.use the above given api to test it on postman.
+6.use the above given api to test it on postman.
