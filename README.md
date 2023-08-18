@@ -4,46 +4,44 @@ EnverX offers a simple and convenient platform to fund early-stage projects
 and trade future carbon credits.
 
 ## _Assginment For Backend Intern Role_
+1. **Clone the Repository**: Start by cloning this repository to your local machine.
+ git clone https://github.com/your-username/EnverX-BE-INTERN-ASSIGNMENT.git
 
-### Instructions
-``` diff
-- Fork this repository
-- Take a fresh `pull`
-- Create a `development` branch
-- `Push` the updated code after task completion
-Note: Make sure to add proper `commit` messages
-```
+2.npm install to install all the required packages to run the project.  
 
-### Task Requirements
-1. Create a RESTful API for a simple blog application.
-2. Use Node.js and Express.js as the backend framework.
-3. Implement CRUD (Create, Read, Update, Delete) operations for blog posts.
-4. Store the blog posts in a dB
-5. Include validation for the API endpoints to ensure data integrity.
-6. Implement error handling and return appropriate HTTP status codes.
-7. Use Git for version control and host the project on GitHub.
-8. Write clear and concise documentation on how to set up and use the API.
+3.make a database on mongodB atlas.  
 
-### Functional Requirements
-1. Set up a new Node.js project and initialize it with a package.json file.
-2. Create the necessary Express.js routes and controllers for CRUD operations on blog posts.
+4.Create a .env file in the project root directory and set up the necessary environment variables. 
+ DB_USERNAME=your-mongodb-connection-string
+ DB_PASSWORD=your-secret-key  
+ 
+5.to run the project : npm start
+ The server will run on http://localhost:5000
 
-- `GET /posts` - Get all blog posts.
-- `GET /posts/:id` - Get a specific blog post by ID.
-- `POST /posts` - Create a new blog post.
-- `PUT /posts/:id` - Update an existing blog post.
-- `DELETE /posts/:id` - Delete a blog post.
 
-4. Test the API endpoints using a tool like Postman or cURL.
-5. Write a README.md file with instructions on setting up the project, running it, and using the API.
-6. Initialize a Git repository, commit your code regularly, and push it to GitHub.
-7. Optionally, include any additional features or improvements you think would enhance the API.
+API Endpoints  
 
-### Timeline
-The estimated time to complete this assignment is 1 day, but it may vary based on your familiarity and experience with the technologies.
+**Users**  
 
-### To Be Considered
-1. The submitted code should be plagiarism free otherwise your application will be disqualified
-2. Please complete the assignment and submit it to us by the submission deadline assigned to you. 
-3. follow the instructions carefully, as we will evaluate your code, documentation, and adherence to best practices. Once you have finished, please send us the GitHub repository link.
-4. If you have any questions or need further clarification, please don't hesitate to reach out to us at hr@enverx.com. We look forward to reviewing your work and discussing it with you in the next stage of the interview process.
+GET /api/user: Get a list of all users.  
+
+POST /api/user/signup: Register a new user.  
+
+POST /api/user/login: Log in an existing user.  
+
+
+**Blogs**
+GET /api/blog/posts: Get a list of all blogs.  
+
+POST /api/blog/posts: Add a new blog.  
+
+PUT /api/blog/posts/:id: Update a blog by ID.  
+
+GET /api/blog/posts/:id: Get a specific blog by ID.  
+
+DELETE /api/blog/posts/:id: Delete a blog by ID.  
+
+GET /api/blog/user/:id: Get blogs by user ID.  
+
+
+6.use the above given api to test it on postman.
